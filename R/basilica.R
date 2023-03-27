@@ -163,7 +163,7 @@ fit <- function(x,
     BIC_trajectories = c(BIC_trajectories, bic)
 
     best_k = obj$exposure %>% ncol()
-    fix_k = input_catalogue %>% ncol
+    fix_k = input_catalogue %>% nrow()
     if(fix_k %>% is.null) fix_k = 0
 
     best_k = best_k - fix_k
